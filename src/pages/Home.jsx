@@ -286,12 +286,13 @@ export default function Home({ onNavigate, onOpenDownload, scrollTarget, onScrol
               
               {/* Action buttons with Microinteractions */}
               <div className="flex flex-wrap gap-4 mt-2">
-                <button 
-                  onClick={() => onNavigate('planner')}
+                <a 
+                  href="/gerar-roteiro"
+                  onClick={(e) => { e.preventDefault(); onNavigate('planner'); }}
                   className="btn btn-primary px-8 py-4 shadow-[0_6px_20px_rgba(8,27,107,0.15)] flex items-center gap-2 cursor-pointer transition-all duration-300 hover:scale-[1.03] hover:bg-brand-orange hover:shadow-[0_6px_20px_rgba(244,122,32,0.25)] active:scale-[0.98]"
                 >
                   Gerar roteiro <ArrowRight className="w-4.5 h-4.5" />
-                </button>
+                </a>
                 <button 
                   onClick={() => {
                     const el = document.getElementById('como-funciona');
@@ -505,12 +506,13 @@ export default function Home({ onNavigate, onOpenDownload, scrollTarget, onScrol
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
               
               {/* Inside-slide CTA badge */}
-              <button 
-                onClick={() => onNavigate('planner')}
+              <a 
+                href="/gerar-roteiro"
+                onClick={(e) => { e.preventDefault(); onNavigate('planner'); }}
                 className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-sm text-brand-navy border border-white/20 px-5 py-2.5 rounded-full text-xs font-bold flex items-center gap-2 shadow-lg cursor-pointer hover:bg-brand-orange hover:text-white transition-all duration-300 active:scale-95"
               >
                 <span>Explorar no app 🗺️</span>
-              </button>
+              </a>
             </div>
 
             {/* Slide details */}
@@ -540,12 +542,13 @@ export default function Home({ onNavigate, onOpenDownload, scrollTarget, onScrol
                 </p>
               </div>
               
-              <button 
-                onClick={() => onNavigate('planner')}
-                className="btn btn-primary w-full sm:w-fit py-3.5 px-8 cursor-pointer shadow-md hover:bg-brand-orange flex items-center justify-center gap-2 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+              <a 
+                href="/gerar-roteiro"
+                onClick={(e) => { e.preventDefault(); onNavigate('planner'); }}
+                className="btn btn-primary w-full sm:w-fit py-3.5 px-8 cursor-pointer shadow-md hover:bg-brand-orange flex items-center justify-center gap-2 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] text-center"
               >
                 Gerar roteiro <ArrowRight className="w-4.5 h-4.5" />
-              </button>
+              </a>
             </div>
 
           </div>
@@ -634,12 +637,13 @@ export default function Home({ onNavigate, onOpenDownload, scrollTarget, onScrol
                   {simState === 'running' ? 'IA Criando Roteiro...' : 'Ver a IA em ação ⚡'}
                 </button>
                 {simState === 'done' && (
-                  <button 
-                    onClick={() => onNavigate('planner')}
-                    className="btn btn-primary w-full py-3.5 flex items-center justify-center gap-2 cursor-pointer transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-md shadow-[0_4px_14px_rgba(8,27,107,0.15)] animate-fade-in-up"
+                  <a 
+                    href="/gerar-roteiro"
+                    onClick={(e) => { e.preventDefault(); onNavigate('planner'); }}
+                    className="btn btn-primary w-full py-3.5 flex items-center justify-center gap-2 cursor-pointer transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-md shadow-[0_4px_14px_rgba(8,27,107,0.15)] animate-fade-in-up text-center"
                   >
                     Gerar meu próprio roteiro
-                  </button>
+                  </a>
                 )}
               </div>
             </div>
@@ -861,12 +865,13 @@ export default function Home({ onNavigate, onOpenDownload, scrollTarget, onScrol
                         </div>
                       </div>
 
-                      <button 
-                        onClick={() => onNavigate('planner')}
+                      <a 
+                        href="/gerar-roteiro"
+                        onClick={(e) => { e.preventDefault(); onNavigate('planner'); }}
                         className="bg-brand-navy text-white p-3 rounded-xl text-center text-[10px] font-bold shadow cursor-pointer border border-transparent hover:bg-brand-orange transition-colors"
                       >
                         Ver no planejador
-                      </button>
+                      </a>
                     </div>
                   )}
 
@@ -890,12 +895,13 @@ export default function Home({ onNavigate, onOpenDownload, scrollTarget, onScrol
                         </div>
                       </div>
 
-                      <button 
-                        onClick={() => onNavigate('planner')}
+                      <a 
+                        href="/gerar-roteiro"
+                        onClick={(e) => { e.preventDefault(); onNavigate('planner'); }}
                         className="bg-brand-orange text-white p-3 rounded-xl text-center text-[10px] font-bold shadow cursor-pointer border border-transparent hover:bg-brand-navy transition-colors"
                       >
                         Traçar Roteiro
-                      </button>
+                      </a>
                     </div>
                   )}
 
@@ -1118,12 +1124,13 @@ export default function Home({ onNavigate, onOpenDownload, scrollTarget, onScrol
               </p>
               
               <div className="flex flex-wrap gap-4 mt-2">
-                <button 
-                  onClick={() => onNavigate('planner')}
+                <a 
+                  href="/gerar-roteiro"
+                  onClick={(e) => { e.preventDefault(); onNavigate('planner'); }}
                   className="btn btn-primary flex items-center gap-2 cursor-pointer shadow-sm hover:bg-brand-orange px-8 py-3.5 transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]"
                 >
                   Gerar meu roteiro
-                </button>
+                </a>
                 <button 
                   onClick={onOpenDownload}
                   className="btn btn-outline text-brand-navy border-brand-navy bg-transparent hover:bg-brand-navy hover:text-white transition-all cursor-pointer px-8 py-3.5 transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]"

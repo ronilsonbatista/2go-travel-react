@@ -69,12 +69,13 @@ export default function Header({ currentPage, onNavigate, onOpenDownload }) {
 
           {/* Desktop Actions */}
           <div className="flex items-center gap-4">
-            <button 
-              onClick={() => onNavigate('planner')}
+            <a 
+              href="/gerar-roteiro"
+              onClick={(e) => { e.preventDefault(); onNavigate('planner'); }}
               className="hidden md:inline-flex btn btn-primary btn-sm cursor-pointer"
             >
               Gerar roteiro
-            </button>
+            </a>
             <button 
               onClick={onOpenDownload}
               className="btn btn-outline btn-sm cursor-pointer"
@@ -121,12 +122,13 @@ export default function Header({ currentPage, onNavigate, onOpenDownload }) {
           </ul>
           
           <div className="mt-auto flex flex-col gap-4">
-            <button 
-              onClick={() => onNavigate('planner')}
+            <a 
+              href="/gerar-roteiro"
+              onClick={(e) => { e.preventDefault(); onNavigate('planner'); }}
               className="w-full btn btn-primary py-3 flex items-center justify-center gap-2 cursor-pointer"
             >
-              <Map className="w-4 h-4" /> Gerar roteiro
-            </button>
+              <Map className="w-4.5 h-4.5" /> Gerar roteiro
+            </a>
             <button 
               onClick={() => {
                 setIsMobileMenuOpen(false);
